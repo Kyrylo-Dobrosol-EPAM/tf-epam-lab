@@ -20,10 +20,10 @@ resource "aws_security_group" "ssh-inbound" {
     }
 
     tags = {
-      Name = "${var.owner}_ssh_inbound"
-      Terraform = var.terraform_flag
-      Project = var.project_name
-      Owner = var.owner
+      Name = "${local.owner}_ssh_inbound"
+      Terraform = local.terraform_flag
+      Project = local.project_name
+      Owner = local.owner
     }
 }
 
@@ -49,10 +49,10 @@ resource "aws_security_group" "lb-http-inbound" {
     }
 
     tags = {
-      Name = "${var.owner}_lb-http-inbound"
-      Terraform = var.terraform_flag
-      Project = var.project_name
-      Owner = var.owner
+      Name = "${local.owner}_lb-http-inbound"
+      Terraform = local.terraform_flag
+      Project = local.project_name
+      Owner = local.owner
     }
 }
 
@@ -78,9 +78,9 @@ resource "aws_security_group" "http-inbound" {
     }
 
     tags = {
-      Name = "${var.owner}_http-inbound"
-      Terraform = var.terraform_flag
-      Project = var.project_name
-      Owner = var.owner
+      Name = "${local.owner}_http-inbound"
+      Terraform = local.terraform_flag
+      Project = local.project_name
+      Owner = local.owner
     }
 }
