@@ -1,13 +1,13 @@
 resource "aws_vpc" "Kyrylo_Dobrosol_01_vpc" {
-  cidr_block       = "10.0.0.0/16"
-  instance_tenancy = "default"
-
-  tags = {
-    Name = "${var.owner}_01_vpc"
-    Terraform = var.terraform_flag
-    Project = var.project_name
-    Owner = var.owner
-  }
+    cidr_block       = "10.0.0.0/16"
+    instance_tenancy = "default"
+    
+    tags = {
+      Name = "${var.owner}_01_vpc"
+      Terraform = var.terraform_flag
+      Project = var.project_name
+      Owner = var.owner
+    }
 }
 
 resource "aws_subnet" "Kyrylo_Dobrosol_01_subnet_public_a" {
